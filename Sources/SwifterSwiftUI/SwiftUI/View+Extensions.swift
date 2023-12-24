@@ -122,8 +122,8 @@ public extension View {
         _ value: Value?,
         transform: (Value, Self) -> Content
     ) -> some View {
-        if let value {
-            transform(value, self)
+        if let valueO=value {
+            transform(valueO, self)
         } else {
             self
         }
